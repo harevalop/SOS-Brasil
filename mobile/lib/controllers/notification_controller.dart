@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-import 'package:SOS_Brasil/main.dart';
+import 'package:sos_brasil/main.dart';
 
 class NotificationController {
   static void showSendNotification() async {

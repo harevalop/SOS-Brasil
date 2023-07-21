@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:SOS_Brasil/components/header_with_fab.dart';
-import 'package:SOS_Brasil/components/custom_bottombar.dart';
-import 'package:SOS_Brasil/components/custom_close_fab.dart';
+import 'package:sos_brasil/components/header_with_fab.dart';
+import 'package:sos_brasil/components/custom_bottombar.dart';
+import 'package:sos_brasil/components/custom_close_fab.dart';
 
 class SOSScreen extends StatefulWidget {
   SOSScreen({Key key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:SOS_Brasil/models/user.dart';
+import 'package:sos_brasil/models/user.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final AppBar appBar;
@@ -28,7 +28,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: Icon(Icons.account_circle, size: 30),
           onPressed: () {
             // _handleUserClick();
-            scaffoldKey.currentState.openEndDrawer();
+            if (scaffoldKey.currentState != null) {
+              scaffoldKey.currentState.openDrawer();
+            }
           },
         )
       ],

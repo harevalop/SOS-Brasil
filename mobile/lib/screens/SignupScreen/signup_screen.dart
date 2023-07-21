@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:loading_overlay/loading_overlay.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-import 'package:SOS_Brasil/main.dart';
+import 'package:sos_brasil/main.dart';
 
-import 'package:SOS_Brasil/components/snackbar.dart';
-import 'package:SOS_Brasil/components/top_box.dart';
+import 'package:sos_brasil/components/snackbar.dart';
+import 'package:sos_brasil/components/top_box.dart';
 
-import 'package:SOS_Brasil/models/session.dart';
-import 'package:SOS_Brasil/models/user.dart';
+import 'package:sos_brasil/models/session.dart';
+import 'package:sos_brasil/models/user.dart';
 
-import 'package:SOS_Brasil/screens/SignupScreen/widgets/inputs.dart';
+import 'package:sos_brasil/screens/SignupScreen/widgets/inputs.dart';
 
-import 'package:SOS_Brasil/controllers/user_controller.dart';
+import 'package:sos_brasil/controllers/user_controller.dart';
 
 class SignupPage extends StatefulWidget {
   SignupPage({Key key}) : super(key: key);

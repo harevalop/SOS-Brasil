@@ -1,6 +1,6 @@
 import 'package:http/http.dart' as http;
 
-import 'package:SOS_Brasil/models/call.dart';
+import 'package:sos_brasil/models/call.dart';
 
 class CallController {
   static Future<String> create(Call call, String token, String baseUrl) async {
@@ -19,21 +19,17 @@ class CallController {
       req.fields["longitude"] = call.longitude.toString();
       req.fields["user_id"] = call.userId.toString();
 
-      if (call.imageFile != null) {
-        req.files.add(http.MultipartFile.fromBytes(
-          "imageFile",
-          call.imageFile.readAsBytesSync(),
-          filename: call.imageFile.path.split("/").last,
-        ));
-      }
+      req.files.add(http.MultipartFile.fromBytes(
+        "imageFile",
+        call.imageFile.readAsBytesSync(),
+        filename: call.imageFile.path.split("/").last,
+      ));
 
-      if (call.audioFile != null) {
-        req.files.add(http.MultipartFile.fromBytes(
-          "audioFile",
-          call.audioFile.readAsBytesSync(),
-          filename: call.audioFile.path.split("/").last,
-        ));
-      }
+      req.files.add(http.MultipartFile.fromBytes(
+        "audioFile",
+        call.audioFile.readAsBytesSync(),
+        filename: call.audioFile.path.split("/").last,
+      ));
 
       var res = await req.send().timeout(Duration(seconds: 30));
       if (res.statusCode == 200) {

@@ -4,7 +4,7 @@ class CloseFAB extends StatelessWidget {
   final Function animate;
   final Animation<double> animateIcon;
 
-  const CloseFAB({Key key, this.animate, this.animateIcon}) : super(key: key);
+  const CloseFAB({Key? key, required this.animate, required this.animateIcon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class CloseFAB extends StatelessWidget {
       child: FittedBox(
         child: FloatingActionButton(
           backgroundColor: Theme.of(context).primaryColor,
-          onPressed: animate,
+          onPressed: animate.call(),
           child: AnimatedIcon(
             icon: AnimatedIcons.menu_close,
             progress: animateIcon,

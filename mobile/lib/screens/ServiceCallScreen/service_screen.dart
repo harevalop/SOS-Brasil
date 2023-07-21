@@ -3,18 +3,18 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-import 'package:SOS_Brasil/models/call.dart';
+import 'package:sos_brasil/models/call.dart';
 
-import 'package:SOS_Brasil/controllers/location_controller.dart';
-import 'package:SOS_Brasil/controllers/compress_file_controller.dart';
+import 'package:sos_brasil/controllers/location_controller.dart';
+import 'package:sos_brasil/controllers/compress_file_controller.dart';
 
-import 'package:SOS_Brasil/components/snackbar.dart';
+import 'package:sos_brasil/components/snackbar.dart';
 
-import 'package:SOS_Brasil/screens/MapScreen/map_screen.dart';
-import 'package:SOS_Brasil/screens/ServiceCallScreen/service_personalchoose_screen.dart';
-import 'package:SOS_Brasil/screens/ServiceCallScreen/components/ServiceScreen/build_methods.dart';
-import 'package:SOS_Brasil/screens/ServiceCallScreen/components/ServiceScreen/fields.dart';
-import 'package:SOS_Brasil/screens/ServiceCallScreen/components/ServiceScreen/service_form.dart';
+import 'package:sos_brasil/screens/MapScreen/map_screen.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/service_personalchoose_screen.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/components/ServiceScreen/build_methods.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/components/ServiceScreen/fields.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/components/ServiceScreen/service_form.dart';
 
 class ServiceScreen extends StatefulWidget {
   final Color color;
@@ -130,9 +130,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
       _formKey.currentState.save();
 
       if (_title.isNotEmpty &&
-          (_description.isNotEmpty || audioFile != null) &&
-          _latitude != null &&
-          _longitude != null) {
+          (_description.isNotEmpty || audioFile != null)) {
         Call call = Call(
           title: _title,
           description: _description,

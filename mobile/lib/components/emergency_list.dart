@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:SOS_Brasil/components/backdrop_close_bar.dart';
+import 'package:sos_brasil/components/backdrop_close_bar.dart';
 
-import 'package:SOS_Brasil/utils/numbers_list.dart';
+import 'package:sos_brasil/utils/numbers_list.dart';
 
 class EmergencyList extends StatelessWidget {
   const EmergencyList({
@@ -45,8 +45,8 @@ class EmergencyList extends StatelessWidget {
                   onTap: () async {
                     String number = "tel: ${phonelist[index].number}";
 
-                    if (await canLaunch(number)) {
-                      await launch(number);
+                    if (await canLaunchUrl(number)) {
+                      await launchUrl(number);
                     } else {
                       throw 'Could not launch $number';
                     }

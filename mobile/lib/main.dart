@@ -4,11 +4,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
-import 'package:SOS_Brasil/screens/LandingScreen/landing_screen.dart';
-import 'package:SOS_Brasil/screens/ForgotPasswordScreen/fp_emailsend.dart';
-import 'package:SOS_Brasil/screens/HomeScreen/home_screen.dart';
-import 'package:SOS_Brasil/screens/InfoScreen/info_screen.dart';
-import 'package:SOS_Brasil/screens/MapScreen/map_screen.dart';
+import 'package:sos_brasil/screens/LandingScreen/landing_screen.dart';
+import 'package:sos_brasil/screens/ForgotPasswordScreen/fp_emailsend.dart';
+import 'package:sos_brasil/screens/HomeScreen/home_screen.dart';
+import 'package:sos_brasil/screens/InfoScreen/info_screen.dart';
+import 'package:sos_brasil/screens/MapScreen/map_screen.dart';
 
 // Create storage
 final storage = new FlutterSecureStorage();
@@ -58,10 +58,9 @@ Future main() async {
         theme: ThemeData(
           brightness: Brightness.light,
           primaryColor: Colors.red[400],
-          accentColor: Colors.red,
           scaffoldBackgroundColor: Colors.grey[300],
           canvasColor: Colors.transparent,
-          fontFamily: "Roboto",
+          fontFamily: "Roboto", colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.red),
         ),
       ));
     });

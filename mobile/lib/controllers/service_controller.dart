@@ -1,6 +1,6 @@
 import 'package:mapbox_search_flutter/mapbox_search_flutter.dart';
 
-import 'package:SOS_Brasil/utils/server_url.dart';
+import 'package:sos_brasil/utils/server_url.dart';
 
 class ServiceController {
   final Map<String, double> _manausCoord = {

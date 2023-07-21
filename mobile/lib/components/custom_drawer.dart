@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:SOS_Brasil/main.dart';
+import 'package:sos_brasil/main.dart';
 
-import 'package:SOS_Brasil/components/snackbar.dart';
+import 'package:sos_brasil/components/snackbar.dart';
 
-import 'package:SOS_Brasil/models/user.dart';
+import 'package:sos_brasil/models/user.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({
-    Key key,
+    Key? key,
     // @required this.user,
   }) : super(key: key);
 
@@ -17,7 +17,7 @@ class CustomDrawer extends StatefulWidget {
 }
 
 class _CustomDrawerState extends State<CustomDrawer> {
-  User _user;
+  late User _user;
 
   @override
   void initState() {
@@ -28,7 +28,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
   getStorageUser() {
     storage.read(key: "user").then((value) {
       setState(() {
-        _user = userFromJson(value);
+        _user = userFromJson(value.toString());
       });
     });
   }

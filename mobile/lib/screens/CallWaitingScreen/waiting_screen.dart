@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
-import 'package:SOS_Brasil/controllers/notification_controller.dart';
-import 'package:SOS_Brasil/controllers/call_controller.dart';
+import 'package:sos_brasil/controllers/notification_controller.dart';
+import 'package:sos_brasil/controllers/call_controller.dart';
 
-import 'package:SOS_Brasil/models/call.dart';
+import 'package:sos_brasil/models/call.dart';
 
-import 'package:SOS_Brasil/screens/CallTrackingScreen/call_tracking_screen.dart';
+import 'package:sos_brasil/screens/CallTrackingScreen/call_tracking_screen.dart';
 
 final storage = new FlutterSecureStorage();
 

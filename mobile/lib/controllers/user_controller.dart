@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import 'package:SOS_Brasil/utils/server_url.dart';
+import 'package:sos_brasil/utils/server_url.dart';
 
-import 'package:SOS_Brasil/controllers/login_controller.dart';
+import 'package:sos_brasil/controllers/login_controller.dart';
 
-import 'package:SOS_Brasil/models/session.dart';
+import 'package:sos_brasil/models/session.dart';
 
 class UserController {
   static Future<Session> signup(String name, String number, String cpf,

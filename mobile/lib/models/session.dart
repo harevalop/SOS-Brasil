@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:SOS_Brasil/models/user.dart';
+import 'package:sos_brasil/models/user.dart';
 
 Session sessionFromJson(String str) => Session.fromJson(json.decode(str));
 

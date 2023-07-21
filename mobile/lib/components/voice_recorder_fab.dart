@@ -35,17 +35,11 @@ class _VoiceRecordFABState extends State<VoiceRecordFAB> {
 
   @override
   void dispose() {
-    if (myRecorder != null) {
-      myRecorder.closeAudioSession();
-    }
+    myRecorder.closeAudioSession();
 
-    if (_sink != null) {
-      _sink.close();
-    }
+    _sink.close();
 
-    if (_recordingDataController != null) {
-      _recordingDataController.close();
-    }
+    _recordingDataController.close();
     super.dispose();
   }
 
@@ -101,10 +95,8 @@ class _VoiceRecordFABState extends State<VoiceRecordFAB> {
 
     _outputFile = File(_mPath);
 
-    if (_mRecordingDataSubscription != null) {
-      await _mRecordingDataSubscription.cancel();
-      _mRecordingDataSubscription = null;
-    }
+    await _mRecordingDataSubscription.cancel();
+    _mRecordingDataSubscription = null;
     widget.callback(_outputFile);
     myRecorder.closeAudioSession();
   }
@@ -112,8 +104,7 @@ class _VoiceRecordFABState extends State<VoiceRecordFAB> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      overflow: Overflow.visible,
-      children: [
+      clipBehavior: Clip.none, children: [
         buildRecordStatus(),
         buildRecordButton(),
       ],

@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import 'package:SOS_Brasil/utils/server_url.dart';
-import 'package:SOS_Brasil/models/session.dart';
+import 'package:sos_brasil/utils/server_url.dart';
+import 'package:sos_brasil/models/session.dart';
 
 class LoginController {
   static Future<Session> login(String _email, String _password) async {

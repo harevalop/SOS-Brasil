@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:SOS_Brasil/models/news.dart';
+import 'package:sos_brasil/models/news.dart';
 
 List<News> newsList = [
   News(
@@ -11,7 +11,7 @@ List<News> newsList = [
 ];
 
 class CustomLeftDrawer extends StatelessWidget {
-  const CustomLeftDrawer({Key key}) : super(key: key);
+  const CustomLeftDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

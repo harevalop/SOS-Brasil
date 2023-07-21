@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:SOS_Brasil/controllers/notification_controller.dart';
+import 'package:sos_brasil/controllers/notification_controller.dart';
 
-import 'package:SOS_Brasil/models/call.dart';
+import 'package:sos_brasil/models/call.dart';
 
-import 'package:SOS_Brasil/components/header_with_fab.dart';
+import 'package:sos_brasil/components/header_with_fab.dart';
 
 class CallTrackingScreen extends StatelessWidget {
   CallTrackingScreen({

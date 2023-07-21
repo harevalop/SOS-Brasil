@@ -4,10 +4,10 @@ class CustomBottomBar extends StatelessWidget {
   final Function showPhone;
   final GlobalKey<ScaffoldState> scaffoldKey;
 
-  const CustomBottomBar({
-    Key key,
-    this.showPhone,
-    this.scaffoldKey,
+  CustomBottomBar({
+    required Key key,
+    required this.showPhone,
+    required this.scaffoldKey,
   }) : super(key: key);
 
   @override
@@ -24,7 +24,9 @@ class CustomBottomBar extends StatelessWidget {
             children: <Widget>[
               IconButton(
                 onPressed: () {
-                  scaffoldKey.currentState.openDrawer();
+                  if (scaffoldKey.currentState != null) {
+                    scaffoldKey.currentState?.openDrawer();
+                  }
                 },
                 icon: Icon(
                   Icons.menu,
@@ -32,7 +34,7 @@ class CustomBottomBar extends StatelessWidget {
                 ),
               ),
               IconButton(
-                onPressed: showPhone,
+                onPressed: showPhone.call(),
                 icon: Icon(
                   Icons.phone,
                   color: Colors.white,

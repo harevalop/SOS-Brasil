@@ -5,11 +5,11 @@ import 'package:flutter/services.dart';
 import 'package:loading_overlay/loading_overlay.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import 'package:SOS_Brasil/components/snackbar.dart';
+import 'package:sos_brasil/components/snackbar.dart';
 
-import 'package:SOS_Brasil/controllers/session_controller.dart';
+import 'package:sos_brasil/controllers/session_controller.dart';
 
-import 'package:SOS_Brasil/screens/ForgotPasswordScreen/fp_newpassword.dart';
+import 'package:sos_brasil/screens/ForgotPasswordScreen/fp_newpassword.dart';
 
 class InsertPasswordCode extends StatefulWidget {
   InsertPasswordCode({Key key, this.email}) : super(key: key);
@@ -203,7 +203,7 @@ class UpperCaseTextFormatter extends TextInputFormatter {
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
     return TextEditingValue(
-      text: newValue.text?.toUpperCase(),
+      text: newValue.text.toUpperCase(),
       selection: newValue.selection,
     );
   }

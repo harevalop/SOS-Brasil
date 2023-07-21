@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:SOS_Brasil/components/snackbar.dart';
+import 'package:sos_brasil/components/snackbar.dart';
 
-import 'package:SOS_Brasil/utils/sos_clipper.dart';
+import 'package:sos_brasil/utils/sos_clipper.dart';
 
 class HeaderWithFAB extends StatelessWidget {
   const HeaderWithFAB({
     Key key,
     @required this.context,
     this.child,
-    this.flag: false,
+    this.flag = false,
     this.color,
     this.onFabDoubleClick,
-    this.fabTag: "HeaderWithFAB",
-    this.headerText: "Solicitação Enviada!",
+    this.fabTag = "HeaderWithFAB",
+    this.headerText = "Solicitação Enviada!",
   }) : super(key: key);
 
   final BuildContext context;
@@ -141,7 +141,7 @@ class ConfirmText extends StatelessWidget {
     Key key,
     @required this.context,
     this.service,
-    this.color: Colors.red,
+    this.color = Colors.red,
   }) : super(key: key);
 
   final BuildContext context;
@@ -191,8 +191,8 @@ class ConfirmText extends StatelessWidget {
                       number = "tel: 193";
                     }
 
-                    if (await canLaunch(number)) {
-                      await launch(number);
+                    if (await canLaunchUrl(number)) {
+                      await launchUrl(number);
                     } else {
                       throw 'Could not launch $number';
                     }

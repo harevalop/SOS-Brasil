@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:SOS_Brasil/models/call.dart';
+import 'package:sos_brasil/models/call.dart';
 
-import 'package:SOS_Brasil/screens/CallWaitingScreen/waiting_screen.dart';
-import 'package:SOS_Brasil/screens/ServiceCallScreen/components/PersonalChoose/build_methods.dart';
-import 'package:SOS_Brasil/screens/ServiceCallScreen/components/PersonalChoose/central_card.dart';
-import 'package:SOS_Brasil/screens/ServiceCallScreen/components/PersonalChoose/choices_cards.dart';
+import 'package:sos_brasil/screens/CallWaitingScreen/waiting_screen.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/components/PersonalChoose/build_methods.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/components/PersonalChoose/central_card.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/components/PersonalChoose/choices_cards.dart';
 
 class PersonalChooseScreen extends StatefulWidget {
   final Call call;
@@ -101,7 +101,7 @@ class _PersonalChooseScreenState extends State<PersonalChooseScreen> {
             String url =
                 "assets/images/forOther${getImageString(widget.color)}.png";
 
-            if (activeIndex == null || activeIndex != 0)
+            if (activeIndex != 0)
               return buildImageGreyFilter(url);
             else
               return buildImage(url);
@@ -126,7 +126,7 @@ class _PersonalChooseScreenState extends State<PersonalChooseScreen> {
             String url =
                 "assets/images/forMe${getImageString(widget.color)}.png";
 
-            if (activeIndex == null || activeIndex != 1)
+            if (activeIndex != 1)
               return buildImageGreyFilter(url);
             else
               return buildImage(url);

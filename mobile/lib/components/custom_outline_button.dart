@@ -5,7 +5,7 @@ class CustomButton extends StatelessWidget {
   final Function function;
   final Color color;
 
-  const CustomButton({Key key, this.text, this.function, this.color})
+  const CustomButton({Key? key, required this.text, required this.function, required this.color})
       : super(key: key);
 
   @override

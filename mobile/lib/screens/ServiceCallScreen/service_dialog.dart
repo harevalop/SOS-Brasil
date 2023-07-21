@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:SOS_Brasil/models/service.dart';
+import 'package:sos_brasil/models/service.dart';
 
-import 'package:SOS_Brasil/screens/ServiceCallScreen/components/ServiceDialog/build_methods.dart';
-import 'package:SOS_Brasil/screens/ServiceCallScreen/service_screen.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/components/ServiceDialog/build_methods.dart';
+import 'package:sos_brasil/screens/ServiceCallScreen/service_screen.dart';
 
-import 'package:SOS_Brasil/animations/transitions.dart';
+import 'package:sos_brasil/animations/transitions.dart';
 
 class ServiceDialog {
   Map<String, double> _userLocation;
